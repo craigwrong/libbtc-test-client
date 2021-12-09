@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		033DE08E275FE87700BAF16D /* LibBTCTestClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE08D275FE87700BAF16D /* LibBTCTestClientApp.swift */; };
+		033DE090275FE87700BAF16D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE08F275FE87700BAF16D /* ContentView.swift */; };
+		033DE092275FE87A00BAF16D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033DE091275FE87A00BAF16D /* Assets.xcassets */; };
+		033DE095275FE87A00BAF16D /* PreviewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033DE094275FE87A00BAF16D /* PreviewAssets.xcassets */; };
+		033DE09E27626CA500BAF16D /* libsecp256k1.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033DE09C27626CA500BAF16D /* libsecp256k1.xcframework */; };
+		033DE09F27626CA500BAF16D /* libbtc.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033DE09D27626CA500BAF16D /* libbtc.xcframework */; };
+		033DE0C627626EBA00BAF16D /* BtcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE0C527626EBA00BAF16D /* BtcManager.swift */; };
+		033DE0C82762702100BAF16D /* genPrivateKey.c in Sources */ = {isa = PBXBuildFile; fileRef = 033DE0C72762702100BAF16D /* genPrivateKey.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		033DE08A275FE87700BAF16D /* LibBTCTestClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibBTCTestClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		033DE08D275FE87700BAF16D /* LibBTCTestClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibBTCTestClientApp.swift; sourceTree = "<group>"; };
+		033DE08F275FE87700BAF16D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		033DE091275FE87A00BAF16D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		033DE094275FE87A00BAF16D /* PreviewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PreviewAssets.xcassets; sourceTree = "<group>"; };
+		033DE09C27626CA500BAF16D /* libsecp256k1.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libsecp256k1.xcframework; sourceTree = "<group>"; };
+		033DE09D27626CA500BAF16D /* libbtc.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libbtc.xcframework; sourceTree = "<group>"; };
+		033DE0A227626DAE00BAF16D /* protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = protocol.h; sourceTree = "<group>"; };
+		033DE0A327626DAE00BAF16D /* aes256_cbc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aes256_cbc.h; sourceTree = "<group>"; };
+		033DE0A427626DAE00BAF16D /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		033DE0A527626DAE00BAF16D /* ripemd160.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ripemd160.h; sourceTree = "<group>"; };
+		033DE0A627626DAE00BAF16D /* headersdb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = headersdb.h; sourceTree = "<group>"; };
+		033DE0A727626DAE00BAF16D /* segwit_addr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = segwit_addr.h; sourceTree = "<group>"; };
+		033DE0A827626DAE00BAF16D /* script.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = script.h; sourceTree = "<group>"; };
+		033DE0A927626DAE00BAF16D /* net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = net.h; sourceTree = "<group>"; };
+		033DE0AA27626DAE00BAF16D /* blockchain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blockchain.h; sourceTree = "<group>"; };
+		033DE0AB27626DAE00BAF16D /* base58.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = base58.h; sourceTree = "<group>"; };
+		033DE0AC27626DAE00BAF16D /* ecc_key.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ecc_key.h; sourceTree = "<group>"; };
+		033DE0AD27626DAE00BAF16D /* bip32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bip32.h; sourceTree = "<group>"; };
+		033DE0AE27626DAE00BAF16D /* tx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tx.h; sourceTree = "<group>"; };
+		033DE0AF27626DAE00BAF16D /* btc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = btc.h; sourceTree = "<group>"; };
+		033DE0B027626DAE00BAF16D /* sha2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sha2.h; sourceTree = "<group>"; };
+		033DE0B127626DAE00BAF16D /* buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		033DE0B227626DAE00BAF16D /* hmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		033DE0B327626DAE00BAF16D /* wallet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wallet.h; sourceTree = "<group>"; };
+		033DE0B427626DAE00BAF16D /* headersdb_file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = headersdb_file.h; sourceTree = "<group>"; };
+		033DE0B527626DAE00BAF16D /* block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = block.h; sourceTree = "<group>"; };
+		033DE0B627626DAE00BAF16D /* portable_endian.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = portable_endian.h; sourceTree = "<group>"; };
+		033DE0B727626DAE00BAF16D /* tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tool.h; sourceTree = "<group>"; };
+		033DE0B827626DAE00BAF16D /* memory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = memory.h; sourceTree = "<group>"; };
+		033DE0B927626DAE00BAF16D /* chainparams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chainparams.h; sourceTree = "<group>"; };
+		033DE0BA27626DAE00BAF16D /* ecc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ecc.h; sourceTree = "<group>"; };
+		033DE0BB27626DAE00BAF16D /* ctaes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ctaes.h; sourceTree = "<group>"; };
+		033DE0BC27626DAE00BAF16D /* serialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = serialize.h; sourceTree = "<group>"; };
+		033DE0BD27626DAE00BAF16D /* vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		033DE0BE27626DAE00BAF16D /* netspv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = netspv.h; sourceTree = "<group>"; };
+		033DE0BF27626DAE00BAF16D /* hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
+		033DE0C027626DAE00BAF16D /* cstr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cstr.h; sourceTree = "<group>"; };
+		033DE0C127626DAE00BAF16D /* random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = random.h; sourceTree = "<group>"; };
+		033DE0C227626DD700BAF16D /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		033DE0C527626EBA00BAF16D /* BtcManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtcManager.swift; sourceTree = "<group>"; };
+		033DE0C72762702100BAF16D /* genPrivateKey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = genPrivateKey.c; sourceTree = "<group>"; };
+		033DE0C92762717E00BAF16D /* genPrivateKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = genPrivateKey.h; sourceTree = "<group>"; };
+		033DE0CA276283EA00BAF16D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		033DE0CB2762848A00BAF16D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		033DE087275FE87700BAF16D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				033DE09E27626CA500BAF16D /* libsecp256k1.xcframework in Frameworks */,
+				033DE09F27626CA500BAF16D /* libbtc.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		033DE081275FE87700BAF16D = {
+			isa = PBXGroup;
+			children = (
+				033DE0CA276283EA00BAF16D /* README.md */,
+				033DE08C275FE87700BAF16D /* src */,
+				033DE0A027626D8900BAF16D /* include */,
+				033DE09B27626C2E00BAF16D /* frameworks */,
+				033DE0CB2762848A00BAF16D /* LICENSE */,
+				033DE08B275FE87700BAF16D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		033DE08B275FE87700BAF16D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				033DE08A275FE87700BAF16D /* LibBTCTestClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		033DE08C275FE87700BAF16D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				033DE0C72762702100BAF16D /* genPrivateKey.c */,
+				033DE0C527626EBA00BAF16D /* BtcManager.swift */,
+				033DE08F275FE87700BAF16D /* ContentView.swift */,
+				033DE08D275FE87700BAF16D /* LibBTCTestClientApp.swift */,
+				033DE091275FE87A00BAF16D /* Assets.xcassets */,
+				033DE093275FE87A00BAF16D /* preview */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		033DE093275FE87A00BAF16D /* preview */ = {
+			isa = PBXGroup;
+			children = (
+				033DE094275FE87A00BAF16D /* PreviewAssets.xcassets */,
+			);
+			path = preview;
+			sourceTree = "<group>";
+		};
+		033DE09B27626C2E00BAF16D /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				033DE09D27626CA500BAF16D /* libbtc.xcframework */,
+				033DE09C27626CA500BAF16D /* libsecp256k1.xcframework */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		033DE0A027626D8900BAF16D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				033DE0C92762717E00BAF16D /* genPrivateKey.h */,
+				033DE0C227626DD700BAF16D /* BridgingHeader.h */,
+				033DE0A127626DAD00BAF16D /* btc */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		033DE0A127626DAD00BAF16D /* btc */ = {
+			isa = PBXGroup;
+			children = (
+				033DE0A227626DAE00BAF16D /* protocol.h */,
+				033DE0A327626DAE00BAF16D /* aes256_cbc.h */,
+				033DE0A427626DAE00BAF16D /* utils.h */,
+				033DE0A527626DAE00BAF16D /* ripemd160.h */,
+				033DE0A627626DAE00BAF16D /* headersdb.h */,
+				033DE0A727626DAE00BAF16D /* segwit_addr.h */,
+				033DE0A827626DAE00BAF16D /* script.h */,
+				033DE0A927626DAE00BAF16D /* net.h */,
+				033DE0AA27626DAE00BAF16D /* blockchain.h */,
+				033DE0AB27626DAE00BAF16D /* base58.h */,
+				033DE0AC27626DAE00BAF16D /* ecc_key.h */,
+				033DE0AD27626DAE00BAF16D /* bip32.h */,
+				033DE0AE27626DAE00BAF16D /* tx.h */,
+				033DE0AF27626DAE00BAF16D /* btc.h */,
+				033DE0B027626DAE00BAF16D /* sha2.h */,
+				033DE0B127626DAE00BAF16D /* buffer.h */,
+				033DE0B227626DAE00BAF16D /* hmac.h */,
+				033DE0B327626DAE00BAF16D /* wallet.h */,
+				033DE0B427626DAE00BAF16D /* headersdb_file.h */,
+				033DE0B527626DAE00BAF16D /* block.h */,
+				033DE0B627626DAE00BAF16D /* portable_endian.h */,
+				033DE0B727626DAE00BAF16D /* tool.h */,
+				033DE0B827626DAE00BAF16D /* memory.h */,
+				033DE0B927626DAE00BAF16D /* chainparams.h */,
+				033DE0BA27626DAE00BAF16D /* ecc.h */,
+				033DE0BB27626DAE00BAF16D /* ctaes.h */,
+				033DE0BC27626DAE00BAF16D /* serialize.h */,
+				033DE0BD27626DAE00BAF16D /* vector.h */,
+				033DE0BE27626DAE00BAF16D /* netspv.h */,
+				033DE0BF27626DAE00BAF16D /* hash.h */,
+				033DE0C027626DAE00BAF16D /* cstr.h */,
+				033DE0C127626DAE00BAF16D /* random.h */,
+			);
+			path = btc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		033DE089275FE87700BAF16D /* LibBTCTestClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 033DE098275FE87A00BAF16D /* Build configuration list for PBXNativeTarget "LibBTCTestClient" */;
+			buildPhases = (
+				033DE086275FE87700BAF16D /* Sources */,
+				033DE087275FE87700BAF16D /* Frameworks */,
+				033DE088275FE87700BAF16D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibBTCTestClient;
+			productName = LibBTCTestClient;
+			productReference = 033DE08A275FE87700BAF16D /* LibBTCTestClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		033DE082275FE87700BAF16D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					033DE089275FE87700BAF16D = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+					};
+				};
+			};
+			buildConfigurationList = 033DE085275FE87700BAF16D /* Build configuration list for PBXProject "LibBTCTestClient" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 033DE081275FE87700BAF16D;
+			productRefGroup = 033DE08B275FE87700BAF16D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				033DE089275FE87700BAF16D /* LibBTCTestClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		033DE088275FE87700BAF16D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				033DE095275FE87A00BAF16D /* PreviewAssets.xcassets in Resources */,
+				033DE092275FE87A00BAF16D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		033DE086275FE87700BAF16D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				033DE0C627626EBA00BAF16D /* BtcManager.swift in Sources */,
+				033DE0C82762702100BAF16D /* genPrivateKey.c in Sources */,
+				033DE090275FE87700BAF16D /* ContentView.swift in Sources */,
+				033DE08E275FE87700BAF16D /* LibBTCTestClientApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		033DE096275FE87A00BAF16D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		033DE097275FE87A00BAF16D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		033DE099275FE87A00BAF16D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"src/preview\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = include;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.craigwrong.concept.LibBTCTestClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = include/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		033DE09A275FE87A00BAF16D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"src/preview\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = include;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.craigwrong.concept.LibBTCTestClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = include/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		033DE085275FE87700BAF16D /* Build configuration list for PBXProject "LibBTCTestClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033DE096275FE87A00BAF16D /* Debug */,
+				033DE097275FE87A00BAF16D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		033DE098275FE87A00BAF16D /* Build configuration list for PBXNativeTarget "LibBTCTestClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033DE099275FE87A00BAF16D /* Debug */,
+				033DE09A275FE87A00BAF16D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 033DE082275FE87700BAF16D /* Project object */;
+}
